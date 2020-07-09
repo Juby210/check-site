@@ -16,6 +16,7 @@ module.exports = class SiteCheck extends Plugin {
                 const { body } = req
 
                 if (body.scan.error) return { result: body.scan.error }
+                if (body.warnings && body.warnings.scan_failed) return { result: `Scan failed! ${body.warnings.scan_failed[0].msg}` }
                 const r = { result: {
                     title: `Website scan: ${body.site.input}`,
                     description: `Rating: **${body.ratings.total.rating}**`,
