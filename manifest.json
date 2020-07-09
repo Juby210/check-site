@@ -1,0 +1,8 @@
+{
+    "name": "Site Check",
+    "description": "Adds \"checksite\" command to check website security.",
+    "author": "Juby210#0577",
+    "version": "1.0.0",
+    "license": "MIT",
+    "permissions": ["ext_api"]
+}
